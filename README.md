@@ -1,1 +1,1 @@
-# C-program-to-display -singly linked list-in-order-and-reverse-order
+#Complete implementation of all teh function related to linked list in C language
