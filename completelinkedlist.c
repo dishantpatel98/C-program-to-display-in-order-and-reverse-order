@@ -195,7 +195,6 @@ t1->next=t2;
                                       }
 
 void reversecompletelinkedlist (struct node* temp){
-
 if(temp!=head){
 	if(temp->next->next){
 reversecompletelinkedlist(temp->next);
@@ -208,7 +207,8 @@ temp->next->next=temp;
 }
               }
 
-else{
+else{if(temp->next!=NULL){
+
         if(temp->next->next!=NULL){
 reversecompletelinkedlist(temp->next);
 
@@ -218,10 +218,7 @@ temp->next=NULL;
         else if(temp->next!=NULL){
             temp->next->next=temp;
             head=temp->next;
-            temp->next=NULL;
-
-        }
-
+            temp->next=NULL;     }
 }
-
+}
 }
