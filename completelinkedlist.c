@@ -65,7 +65,7 @@ int main(){
 		       break;
 	         case 8:
 		      insertAtmiddle(head);
-	       break;	      
+	       break;
 	        case 9:
 	             reversecompletelinkedlist(head);
 		     break;
@@ -87,7 +87,7 @@ void insertAtEnd(struct node **q, int x1, char ch){
   t->next=NULL;
   if(*q==NULL){
 	*q=t;
-	
+
   }else {
 	struct node *t1;
 	t1=*q;
@@ -201,29 +201,27 @@ if(temp!=head){
 reversecompletelinkedlist(temp->next);
 
 temp->next->next=temp;
-                    
-
 }
 else{
-
 head=temp->next;
 temp->next->next=temp;
-
 }
-
-}
-
+              }
 
 else{
+        if(temp->next->next!=NULL){
 reversecompletelinkedlist(temp->next);
 
 temp->next->next=temp;
 temp->next=NULL;
+        }
+        else if(temp->next!=NULL){
+            temp->next->next=temp;
+            head=temp->next;
+            temp->next=NULL;
 
+        }
 
 }
-
-
-
 
 }
